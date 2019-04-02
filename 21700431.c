@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <string.h>
 #include "21700431.h"
-
+typedef int bool;
+#define true 1
+#define false 0
 int sort_digits(int input) {
+	//	c = getchar();
 	int output = 0;
 	int temp = input;
 	int ins;
@@ -23,4 +26,12 @@ int sort_digits(int input) {
 		temp /= 10;
 	}
 	return output;
+}
+
+bool isPrime(int n){
+	int i;
+	for(i = 2; i < n; i++){
+		if( n % i == 0) return false;
+	}
+	return true;
 }
