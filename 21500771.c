@@ -11,3 +11,18 @@ int reverse_digits(int input) {
     }
     return output;
 }
+
+void binarized(int input, char output[]) {
+	//printf("%s\n", output);
+	int c;
+	for (int i = 0; input > 0; i++) {
+		c = input % 2;
+		//printf("%d\n", c);
+		input /= 2;
+		if (c == 1) {
+			output[31-i] = '1';
+		}
+		//printf("%c", output[31-i]);
+	}
+	return;
+}

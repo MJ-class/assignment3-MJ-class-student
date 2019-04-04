@@ -8,6 +8,10 @@
 #define TRUE 1
 void main() {
 	char input[30];
+	char binary[33] ;
+	memset(binary,'0',32);
+	binary[32] = 0;
+	//printf("%s", binary);
 	int is_number;
 	int reverse;
 	int sort;
@@ -33,10 +37,11 @@ void main() {
 		if(is_number) {
 			reverse = reverse_digits(atoi(input));
 			sort = sort_digits(atoi(input));
-			printf("reverse>%d\nsort>%d\n", reverse, sort);
+			binarized(atoi(input), binary);
+			printf("reverse>%d\nsort>%d\nbinary>%s\n", reverse, sort, binary);
 			if(isPrime(atoi(input))) printf("True\n");
 			else printf("False\n");
 		}
-		
+
 	}
 }
