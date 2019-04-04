@@ -39,6 +39,7 @@ void main() {
 			sort = sort_digits(atoi(input));
 			binarized(atoi(input), binary);
 			printf("reverse>%d\nsort>%d\nbinary>%s\n", reverse, sort, binary);
+			printf("isPrime> ");
 			if(isPrime(atoi(input))) printf("True\n");
 			else printf("False\n");
 		}
